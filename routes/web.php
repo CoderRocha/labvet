@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/clients', [ClientController::class, 'index']);
+Route::get('/client', [ClientController::class, 'index']);
