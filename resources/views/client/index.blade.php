@@ -16,7 +16,7 @@
                 <br>
 
                 <div class="box-body no-padding">
-                    <table id="tb_default" class="table table-bordered table-striped">
+                    <table id="tb_default" class="table table-bordered table-striped mt-3">
                         <thead>
                             <tr>
                                 <th style="width: 10px">#</th>
