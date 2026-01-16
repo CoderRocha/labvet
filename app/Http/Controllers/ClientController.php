@@ -75,7 +75,7 @@ class ClientController extends Controller
         $client = Client::find($id);
 
         if(isset($client)) {
-            
+
             $client->name = $request->input('name');
             $client->email = $request->input('email');
             $client->phone = $request->input('phone');
@@ -93,6 +93,11 @@ class ClientController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $client = Client::find($id);
+
+        if(isset($client)) {
+            $client->delete();
+            return redirect('/client');
+        }
     }
 }
