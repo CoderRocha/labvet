@@ -24,22 +24,22 @@
                                 >
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group mt-3">
                                 <label for="email">Email</label>
                                 <input type="email" class="form-control" name="email" id="email">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group mt-3">
                                 <label for="phone">Phone</label>
                                 <input type="text" class="form-control" name="phone" id="phone">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group mt-3">
                                 <label for="address">Address</label>
                                 <input type="text" class="form-control" name="address" id="address">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group mt-3">
                                 <label for="state">State</label>
                                 <select class="form-control" id="state" name="state">
                                     <option value="AC">AC</option>
@@ -76,6 +76,7 @@
                         <br>
                         <div class="box-footer">
                             <button type="submit" class="btn btn-success">Save</button>
+                            <a href="/client" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
