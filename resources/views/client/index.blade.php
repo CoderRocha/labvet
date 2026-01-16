@@ -42,7 +42,7 @@
                                     <td>{{ $client->state }}</td>
                                     <td>
                                         <a href="/client/edit/{{$client->id}}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
-                                        <a href="/client/delete/{{$client->id}}" onclick="return confirm('Do you want to delete this client id {{$client->id}} ?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>Delete</a>
+                                        <a href="/client/delete/{{$client->id}}" onclick="return confirm('Do you really want to delete this Client (ID: {{$client->id}}) ?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
