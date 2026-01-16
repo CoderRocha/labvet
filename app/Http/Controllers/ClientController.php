@@ -58,7 +58,13 @@ class ClientController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $client = Client::find($id);
+
+        if (isset($client)) {
+        return view('client.edit', compact('client'));
+        } else {
+            return redirect('/client');
+        }
     }
 
     /**
