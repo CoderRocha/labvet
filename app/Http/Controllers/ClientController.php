@@ -32,7 +32,17 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $client = new Client();
+
+        $client->name = $request->input('name');
+        $client->email = $request->input('email');
+        $client->phone = $request->input('phone');
+        $client->address = $request->input('address');
+        $client->state = $request->input('state');
+
+        $client->save();
+
+        return redirect('/client');
     }
 
     /**
