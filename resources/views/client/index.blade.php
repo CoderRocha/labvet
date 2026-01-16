@@ -2,7 +2,7 @@
 
 @section('body')
 
-<div class="alert alert-success" role="alert">
+<div class="alert alert-primary" role="alert">
     <h2>Clients</h2>
 </div>
 
