@@ -27,7 +27,7 @@
                         <a class="nav-link" href="/client">Clients <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pets</a>
+                        <a class="nav-link" href="/pet">Pets</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Procedures</a>
