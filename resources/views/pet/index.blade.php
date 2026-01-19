@@ -37,13 +37,13 @@
                             @foreach ($pets as $pet )
                                 <tr>
                                     <td>{{ $pet->id }}</td>
-                                    <td>{{ $pet->photo_path }}</td>
+                                    <td><img src="{{asset('storage/' . $pet->photo_path) }}" width="100px" height="100px" alt="Pet Photo" style="max-width: 100px; max-height: 70%;"></td>
                                     <td>{{ $pet->name }}</td>
                                     <td>Client</td>
                                     <td>{{ $pet->specie }}</td>
                                     <td>{{ $pet->breed }}</td>
                                     <td>{{ $pet->gender }}</td>
-                                    <td>{{ $pet->birthday }}</td>
+                                    <td>{{\Carbon\Carbon::parse($pet->birthday)->format('d/m/Y')}}</td>
                                     <td>
                                         <a href="/pet/edit/{{$pet->id}}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
                                         <a href="/pet/delete/{{$pet->id}}" onclick="return confirm('Do you really want to delete this Pet (ID: {{$pet->id}}) ?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>Delete</a>
