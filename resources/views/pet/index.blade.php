@@ -38,10 +38,12 @@
                                 <tr>
                                     <td>{{ $pet->id }}</td>
                                     <td>{{ $pet->photo_path }}</td>
+                                    <td>{{ $pet->name }}</td>
                                     <td>Client</td>
                                     <td>{{ $pet->specie }}</td>
+                                    <td>{{ $pet->breed }}</td>
                                     <td>{{ $pet->gender }}</td>
-                                    <td>Data</td>
+                                    <td>{{ $pet->birthday }}</td>
                                     <td>
                                         <a href="/pet/edit/{{$pet->id}}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
                                         <a href="/pet/delete/{{$pet->id}}" onclick="return confirm('Do you really want to delete this Pet (ID: {{$pet->id}}) ?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>Delete</a>

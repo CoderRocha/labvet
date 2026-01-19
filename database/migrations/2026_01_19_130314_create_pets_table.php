@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('color')->nullable();
             $table->decimal('height', 12, 3)->nullable();
             $table->decimal('weight', 12, 3)->nullable();
+            $table->string('gender')->nullable();
             $table->date('birthday')->nullable();
             $table->string('father')->nullable();
             $table->string('mother')->nullable();
