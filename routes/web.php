@@ -31,3 +31,4 @@ Route::get('/client/delete/{id}', [ClientController::class, 'destroy']);
 // pets
 
 Route::get('/pet', [PetController::class, 'index']);
+Route::get('/pet/new', [PetController::class, 'create']);
