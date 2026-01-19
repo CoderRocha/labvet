@@ -89,6 +89,8 @@
                             <a href="/pet" class="btn btn-danger">Cancel</a>
                         </div>
 
+                        <br>
+
                     </form>
 
                 </div>

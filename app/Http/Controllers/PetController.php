@@ -83,7 +83,35 @@ class PetController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $pet = Pet::find($id);
+
+        if(isset($pet)) {
+
+        $pet->name = $request->input('name');
+        $no_photo = $request->input('no_photo');
+        if(isset($no_photo)) {
+            $pet->photo_path = '';
+        } else {
+            if($request->file('photo')) {
+                $pet->photo_path = $request->file('photo')->store('photos');
+            }
+        }
+        $pet->specie           = $request->input('specie');
+        $pet->breed            = $request->input('breed');
+        $pet->color            = $request->input('color');
+        $pet->height           = $request->input('height');
+        $pet->weight           = $request->input('weight');
+        $pet->gender           = $request->input('gender');
+        $pet->birthday         = date('Y-m-d', strtotime($request->input('birthday')));
+        $pet->father           = $request->input('father');
+        $pet->mother           = $request->input('mother');
+        $pet->observations     = $request->input('observations');
+
+        $pet->save();
+
+        return redirect('/pet');
+
+        }
     }
 
     /**

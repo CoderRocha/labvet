@@ -13,7 +13,7 @@
 
                 <br>
                 <div class="box-body no-padding">
-                    <form role="form" action="/pet" method="POST" enctype="multipart/form-data">
+                    <form role="form" action="/pet/{{ $pet->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="box-body">
                             <div class="form-group">
@@ -84,7 +84,7 @@
 
                             <div class="form-group mt-3">
                                 <label for="observations">Observations</label>
-                                <textarea class="form-control" rows="4" name="observations" id="observations" value="{{ $pet->observations }}"></textarea>
+                                <textarea class="form-control" rows="4" name="observations" id="observations">{{ $pet->observations }}</textarea>
                             </div>
 
                         </div>
@@ -93,6 +93,8 @@
                             <button type="submit" class="btn btn-success">Save</button>
                             <a href="/pet" class="btn btn-danger">Cancel</a>
                         </div>
+
+                        <br>
 
                     </form>
 
