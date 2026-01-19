@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('pets', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('client_id')->nullable();
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('set null');
+
             $table->string('photo_path')->nullable();
             $table->string('name');
             $table->string('specie')->nullable();
