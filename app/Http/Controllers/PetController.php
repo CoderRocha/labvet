@@ -32,7 +32,28 @@ class PetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pet = new Pet();
+
+        $pet->name = $request->input('name');
+        if(!$request->file('photo')) {
+            $pet->photo_path = '';
+        } else {
+            $pet->photo_path = $request->file('photo')->store('public/photos');
+        }
+        $pet->specie           = $request->input('specie');
+        $pet->breed            = $request->input('breed');
+        $pet->color            = $request->input('color');
+        $pet->height           = $request->input('height');
+        $pet->weight           = $request->input('weight');
+        $pet->gender           = $request->input('gender');
+        $pet->birthday         = date('Y-m-d', strtotime($request->input('birthday')));
+        $pet->father           = $request->input('father');
+        $pet->mother           = $request->input('mother');
+        $pet->observations     = $request->input('observations');
+
+        $pet->save();
+
+        return redirect('/pet');
     }
 
     /**
