@@ -35,3 +35,4 @@ Route::get('/pet/new', [PetController::class, 'create']);
 Route::post('/pet', [PetController::class, 'store']);
 Route::get('/pet/edit/{id}', [PetController::class, 'edit']);
 Route::post('/pet/{id}', [PetController::class, 'update']);
+Route::get('/pet/delete/{id}', [PetController::class, 'destroy']);
