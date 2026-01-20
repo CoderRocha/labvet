@@ -58,7 +58,13 @@ class VetController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $vet = Vet::find($id);
+
+        if (isset($vet)) {
+        return view('vet.edit', compact('vet'));
+        } else {
+            return redirect('/vet');
+        }
     }
 
     /**
@@ -66,7 +72,20 @@ class VetController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $vet = Vet::find($id);
+
+        if(isset($vet)) {
+
+            $vet->name = $request->input('name');
+            $vet->email = $request->input('email');
+            $vet->phone = $request->input('phone');
+            $vet->address = $request->input('address');
+            $vet->state = $request->input('state');
+
+            $vet->save();
+
+            return redirect('/vet');
+        } 
     }
 
     /**
@@ -74,6 +93,11 @@ class VetController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $vet = Vet::find($id);
+
+        if(isset($vet)) {
+            $vet->delete();
+            return redirect('/vet');
+        }
     }
 }
