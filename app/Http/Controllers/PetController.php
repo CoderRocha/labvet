@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use App\Models\Pet;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,12 @@ class PetController extends Controller
      */
     public function create()
     {
-        return view('pet.new');
+        $clients = Client::all();
+
+        if (isset($clients)) {
+
+            return view('pet.new', compact('clients'));
+        }
     }
 
     /**
@@ -32,9 +38,14 @@ class PetController extends Controller
      */
     public function store(Request $request)
     {
+        $client = Client::find($request->input('id_client'));
+
+        if(isset($client)) {
+
         $pet = new Pet();
 
         $pet->name = $request->input('name');
+        $pet->client_id = $request->input('id_client');
         if(!$request->file('photo')) {
             $pet->photo_path = '';
         } else {
@@ -54,6 +65,7 @@ class PetController extends Controller
         $pet->save();
 
         return redirect('/pet');
+        }
     }
 
     /**

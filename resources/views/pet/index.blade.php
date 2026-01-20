@@ -39,7 +39,7 @@
                                     <td>{{ $pet->id }}</td>
                                     <td><img src="{{asset('storage/' . $pet->photo_path) }}" width="100px" height="100px" alt="Pet Photo" style="max-width: 100px; max-height: 70%;"></td>
                                     <td>{{ $pet->name }}</td>
-                                    <td>Client</td>
+                                    <td>{{ $pet->client->name ?? '' }}</td>
                                     <td>{{ $pet->specie }}</td>
                                     <td>{{ $pet->breed }}</td>
                                     <td>{{ $pet->gender }}</td>
