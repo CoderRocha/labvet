@@ -11,7 +11,7 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 <div class="box-header">
-                    <a href="/client/new" class="btn btn-success">New Procedure</a>
+                    <a href="/procedure/new" class="btn btn-success">New Procedure</a>
                 </div>
                 <br>
 
