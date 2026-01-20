@@ -86,7 +86,7 @@ close_modal();
                             </div>
 
                             <div class="form-group mt-3">
-                                <input type="hidden" class="form-control" name="id_client" id="id_client" required value="{{ $pet->client->id }}">
+                                <input type="hidden" class="form-control" name="id_client" id="id_client" required value="{{ $pet->client->id ?? '' }}">
                             </div>
 
                             <div class="form-group mt-3">
