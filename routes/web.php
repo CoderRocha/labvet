@@ -3,6 +3,7 @@
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ProcedureController;
+use App\Http\Controllers\VetController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,3 +47,7 @@ Route::post('/procedure', [ProcedureController::class, 'store']);
 Route::get('/procedure/edit/{id}', [ProcedureController::class, 'edit']);
 Route::post('/procedure/{id}', [ProcedureController::class, 'update']);
 Route::get('/procedure/delete/{id}', [ProcedureController::class, 'destroy']);
+
+// vets
+
+Route::get('/vet', [VetController::class, 'index']);
