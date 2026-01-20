@@ -99,9 +99,12 @@ class PetController extends Controller
     {
         $pet = Pet::find($id);
 
+        $client = Client::find($request->input('id_client'));
+
         if(isset($pet)) {
 
         $pet->name = $request->input('name');
+        $pet->client()->associate($client);
         $no_photo = $request->input('no_photo');
         if(isset($no_photo)) {
             $pet->photo_path = '';
