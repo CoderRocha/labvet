@@ -2,8 +2,8 @@
 
 @section('body')
 
-<div class="alert alert-success" role="alert">
-    <h2>New Procedure</h2>
+<div class="alert alert-warning" role="alert">
+    <h2>Edit Procedure</h2>
 </div>
 <section class="content">
 
@@ -13,12 +13,12 @@
 
                 <br>
                 <div class="box-body no-padding">
-                    <form role="form" action="/procedure" method="POST">
+                    <form role="form" action="/procedure/{{ $procedure->id }}" method="POST">
                         @csrf
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control" name="name" id="name" required
+                                <input type="text" class="form-control" name="name" id="name" required value="{{ $procedure->name }}"
                                 onInvalid="this.setCustomValidity('This field is required!')"
                                 {{-- onchange="try{setCustomValidity('')}catch(e){}" --}}
                                 >
@@ -26,7 +26,7 @@
 
                             <div class="form-group mt-3">
                                 <label for="price">Price</label>
-                                <input type="number" class="form-control" name="price" id="price" step="0.01" value="0.00" placeholder="0.00" required>
+                                <input type="number" class="form-control" name="price" id="price" step="0.01" value="{{ $procedure->price }}" placeholder="0.00" required>
                             </div>
 
                         </div>
