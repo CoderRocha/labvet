@@ -52,3 +52,4 @@ Route::get('/procedure/delete/{id}', [ProcedureController::class, 'destroy']);
 
 Route::get('/vet', [VetController::class, 'index']);
 Route::get('/vet/new', [VetController::class, 'create']);
+Route::post('/vet', [VetController::class, 'store']);
