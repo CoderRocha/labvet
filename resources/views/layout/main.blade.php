@@ -36,7 +36,7 @@
                         <a class="nav-link" href="/vet">Vets</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Records</a>
+                        <a class="nav-link" href="/consultation">Consultations</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Reports</a>
