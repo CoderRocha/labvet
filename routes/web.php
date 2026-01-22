@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ProcedureController;
 use App\Http\Controllers\VetController;
@@ -56,3 +57,7 @@ Route::post('/vet', [VetController::class, 'store']);
 Route::get('/vet/edit/{id}', [VetController::class, 'edit']);
 Route::post('/vet/{id}', [VetController::class, 'update']);
 Route::get('/vet/delete/{id}', [VetController::class, 'destroy']);
+
+// consultations
+
+Route::get('/consultation', [ConsultationController::class, 'index']);
