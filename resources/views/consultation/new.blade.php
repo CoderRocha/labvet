@@ -257,6 +257,8 @@ close_modal_vets();
                             <a href="/consultation" class="btn btn-danger">Cancel</a>
                         </div>
 
+                        <br>
+
                     </form>
 
                 </div>
