@@ -42,7 +42,24 @@ class ConsultationController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $pet = Pet::find($request->input('id_pet'));
+        $vet = Vet::find($request->input('id_vet'));
+
+        $consultation = new Consultation;
+        $consultation->date = date('Y-m-d', strtotime($request->consultation_date));
+        $consultation->pet()->associate($pet);
+        $consultation->vet()->associate($vet);
+        $consultation->total_cost = $request->input('total_value');
+        $consultation->save();
+
+        // for the procedures
+
+        $procedures = json_decode($request->input('memo_procedures'));
+        foreach ($procedures as $value) {
+            $consultation->procedures()->attach($value->IDPROCEDURE);
+        }
+
+        return redirect('/consultation');
     }
 
     /**
