@@ -42,6 +42,7 @@
                                     <td>{{ $consultation->total_cost }}</td>
                                     <td>
                                         {{-- <a href="/consultation/edit/{{$consultation->id}}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a> --}}
+                                        <a href="/consultation/show/{{$consultation->id}}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i>View</a>
                                         <a href="/consultation/delete/{{$consultation->id}}" onclick="return confirm('Do you really want to delete this Consultation (ID: {{$consultation->id}}) ?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>Delete</a>
                                     </td>
                                 </tr>
