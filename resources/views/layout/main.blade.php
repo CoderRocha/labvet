@@ -39,7 +39,7 @@
                         <a class="nav-link" href="/consultation">Consultations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Reports</a>
+                        <a class="nav-link" href="/report">Reports</a>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link disabled" href="#">Disabled</a>
