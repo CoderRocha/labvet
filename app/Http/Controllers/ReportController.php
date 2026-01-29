@@ -59,6 +59,12 @@ class ReportController extends Controller
                     return view('report.procedures-report', compact('procedures'));
                 }
                 break;
+            case 'vets':
+                $vets = Vet::all();
+                if (isset($vets)) {
+                    return view('report.vets-report', compact('vets'));
+                }
+                break;
         }
     }
 
