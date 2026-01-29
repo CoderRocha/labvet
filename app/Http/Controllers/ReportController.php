@@ -53,6 +53,12 @@ class ReportController extends Controller
                     return view('report.pets-report', compact('pets'));
                 }
                 break;
+            case 'procedures':
+                $procedures = Procedure::all();
+                if (isset($procedures)) {
+                    return view('report.procedures-report', compact('procedures'));
+                }
+                break;
         }
     }
 
