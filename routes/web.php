@@ -70,3 +70,4 @@ Route::get('/consultation/show/{id}', [ConsultationController::class, 'show']);
 // reports
 
 Route::get('/report', [ReportController::class, 'index']);
+Route::post('/report/show', [ReportController::class, 'show']);

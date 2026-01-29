@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Client;
+use App\Models\Pet;
+use App\Models\Procedure;
+use App\Models\Vet;
+use App\Models\Consultation;
 
 class ReportController extends Controller
 {
@@ -33,9 +38,16 @@ class ReportController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Request $request)
     {
-        //
+        switch ($request->input('report_type')) {
+            case 'clients':
+                $clients = Client::all();
+                if (isset($clients)) {
+                    return view('report.clients-report', compact('clients'));
+                }
+                break;
+        }
     }
 
     /**
