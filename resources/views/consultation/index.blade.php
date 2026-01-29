@@ -34,12 +34,12 @@
                         <tbody>
                             @foreach ($consultations as $consultation )
                                 <tr>
-                                    <td>id</td>
-                                    <td>data</td>
-                                    <td>pet</td>
-                                    <td>client</td>
-                                    <td>vet</td>
-                                    <td>total</td>
+                                    <td>{{ $consultation->id }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($consultation->date)->format('d/m/Y') }}</td>
+                                    <td>{{ $consultation->pet->name ?? '' }}</td>
+                                    <td>{{ $consultation->pet->client->name }}</td>
+                                    <td>{{ $consultation->vet->name }}</td>
+                                    <td>{{ $consultation->total_cost }}</td>
                                     <td>
                                         <a href="/consultation/edit/{{$consultation->id}}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
                                         <a href="/consultation/delete/{{$consultation->id}}" onclick="return confirm('Do you really want to delete this Consultation (ID: {{$consultation->id}}) ?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>Delete</a>
