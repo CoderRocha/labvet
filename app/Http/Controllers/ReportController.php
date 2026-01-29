@@ -47,6 +47,12 @@ class ReportController extends Controller
                     return view('report.clients-report', compact('clients'));
                 }
                 break;
+            case 'pets':
+                $pets = Pet::all();
+                if (isset($pets)) {
+                    return view('report.pets-report', compact('pets'));
+                }
+                break;
         }
     }
 
