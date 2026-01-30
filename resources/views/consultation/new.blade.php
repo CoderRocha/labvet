@@ -332,7 +332,7 @@ close_modal_vets();
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="consultation_date">Date</label>
-                                <input type="date" class="form-control" name="consultation_date" id="consultation_date"
+                                <input type="date" class="form-control" name="consultation_date" id="consultation_date" value="{{ date('Y-m-d') }}"
                                 {{-- onInvalid="this.setCustomValidity('This field is required!')" --}}
                                 {{-- onchange="try{setCustomValidity('')}catch(e){}" --}}
                                 >
