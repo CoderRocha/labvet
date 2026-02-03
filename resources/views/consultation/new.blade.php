@@ -421,7 +421,7 @@ close_modal_vets();
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                     <h5>
-                                        <span class="text-success">Total:</span>
+                                        <span class="text-success">Total ($):</span>
                                         <span class="text-success" id="consultation_value">0.0</span>
                                     </h5>
                                 </div>

@@ -25,7 +25,7 @@
                             </div>
 
                             <div class="form-group mt-3">
-                                <label for="price">Price</label>
+                                <label for="price">Price ($)</label>
                                 <input type="number" class="form-control" name="price" id="price" step="0.01" value="0.00" placeholder="0.00" required>
                             </div>
 

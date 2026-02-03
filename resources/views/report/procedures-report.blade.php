@@ -19,7 +19,7 @@
                             <tr>
                                 <th style="width: 10px">#</th>
                                 <th>Name</th>
-                                <th>Price</th>
+                                <th>Price ($)</th>
                             </tr>
 
                         </thead>

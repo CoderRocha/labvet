@@ -21,7 +21,7 @@
                             <tr>
                                 <th style="width: 10px">#</th>
                                 <th>Name</th>
-                                <th style="width: 150px">Price</th>
+                                <th style="width: 150px">Price ($)</th>
                                 <th style="width: 250px">&nbsp;</th>
 
                             </tr>
