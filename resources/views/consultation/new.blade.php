@@ -339,7 +339,7 @@ close_modal_vets();
                             </div>
 
                             <h3 class="text-success mt-3">
-                                Veterinary:
+                                Veterinary
                             </h3>
 
                             <!-- Button trigger modalVets -->
@@ -357,7 +357,7 @@ close_modal_vets();
                             </div>
 
                             <h3 class="text-primary mt-3">
-                                Pet:
+                                Pet
                             </h3>
 
                             <!-- Button trigger modalPets -->
@@ -394,7 +394,7 @@ close_modal_vets();
                                 <input type="text" class="form-control" name="memo_procedures" id="memo_procedures" readOnly >
                             </div>
 
-                            <h3 class="text-danger mt-3">Procedures:</h3>
+                            <h3 class="text-danger mt-3">Procedures</h3>
 
                             <!-- Button trigger modalProcedures -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProcedures">
@@ -406,7 +406,7 @@ close_modal_vets();
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
-                                        <th>Price</th>
+                                        <th>Price ($)</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
