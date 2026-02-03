@@ -121,12 +121,12 @@ close_modal();
                             </div>
 
                             <div class="form-group mt-3">
-                                <label for="height">Height</label>
+                                <label for="height">Height (cm)</label>
                                 <input type="number" class="form-control" name="height" id="height" step="0.001" value="0.000" placeholder="0.000">
                             </div>
 
                             <div class="form-group mt-3">
-                                <label for="weight">Weight</label>
+                                <label for="weight">Weight (kg)</label>
                                 <input type="number" class="form-control" name="weight" id="weight" step="0.001" value="0.000" placeholder="0.000">
                             </div>
 
